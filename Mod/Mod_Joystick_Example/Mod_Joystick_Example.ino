@@ -1,9 +1,9 @@
 #include <OneButton.h>
 #include <OSSex.h>
 
-/* Hook up a Pot Knob to Control
+/* Hook up a a Joystick (made from two potentiometers) to Control
  * Example by Quitmyer/Comingle, Dec 9, 2014
- * {♥} COMINGLE
+ * {♥} COMINGLE --  2014/12/04 -- Share Freely
 */
 
 void setup() {
