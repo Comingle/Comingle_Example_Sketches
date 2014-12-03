@@ -24,18 +24,19 @@ void setup() {
   } else {
     println("Available cameras:");
     for (int i = 0; i < cameras.length; i++) {
-      println(cameras[i]);
+      println(i+" "+cameras[i]);
     }
     
        // The camera can be initialized directly using an 
     // element from the array returned by list():
-    video = new Capture(this,width, height, cameras[0]);
+    video = new Capture(this
+    ,   width, height
+    //, cameras[19]
+    );
   }      
 
   
-/*  video = new Capture(this, width, height,
- // Capture.list()[1],
-  15); */
+
   // Create an empty image the same size as the video
   prevFrame = createImage(video.width,video.height,RGB);
   video.start();
