@@ -26,7 +26,7 @@ void setup() {
 
   // Set up the button click handlers
   //This makes it so when we press our button, it will trigger the "click function"
-  Toy.attachClick(Click);
+  Toy.attachClick(click);
 
   Serial.begin(9600);
 
@@ -37,9 +37,9 @@ void loop() {
    calibration(inputnum,calibrationtime); 
   }
   
+  //Run the standar routine
   sensorValue = Toy.getInput(inputnum);
-
-
+  
   Serial.print("potentiometer Value ");
   Serial.print(sensorValue);     //Note, we should address the confusion of how to address inputs 1 and 2
   Serial.print(" | ");
@@ -64,6 +64,9 @@ void loop() {
   Toy.setOutput(1,scaledreading);
 
   Toy.setOutput(2,scaledreading);
+  
+  //Let's reading ports catchup
+  delay(1);
 }
 
 
@@ -123,7 +126,7 @@ delay(2);
 
 }
 
-void Click() {
+void click() {
   clicked = true;
 }
 

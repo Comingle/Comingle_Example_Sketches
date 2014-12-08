@@ -1,4 +1,3 @@
-#include <OneButton.h>
 #include <OSSex.h>
 
 /* Hook up a a Joystick (made from two potentiometers) to Control
