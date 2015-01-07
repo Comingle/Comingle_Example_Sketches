@@ -1,4 +1,3 @@
-#include <OSSex.h>
 
 /* It's the end times. The world is a vast desolated scorched crumb. 
  * The only technology that has survived are Comingle's Sex Toys 
@@ -14,15 +13,14 @@
  * {♥} COMINGLE --  2014/12/04 -- Share Freely
  */
 
-
-
+#include <OSSex.h>
 
 void setup() {
   // 0 for all Multivibes currently.
   Toy.setID(0);
 
   // Blip all the motors and flash the LED to show that everything is working and the device is on.
-  startupSequence();
+  startupSequence();s
 
   pinMode(Toy.device.inPins[1], INPUT);
 
