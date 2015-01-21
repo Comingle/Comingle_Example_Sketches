@@ -12,8 +12,8 @@ based mostly off blinkwithoutdelay:
 
 // constants won't change. Used here to 
 // set pin numbers:
-const int ledPin =  11;      // the number of the LED pin
-
+const int ledPin =  6;      // This is the Analog input
+const int inputPin = A8;
 // Variables will change:
 int ledState = LOW;             // ledState used to set the LED
 long previousMillis = 0;        // will store last time LED was updated
@@ -26,12 +26,21 @@ void setup() {
   // set the digital pin as output:
   pinMode(ledPin, OUTPUT); 
   Serial.begin(9600);  
+    pinMode(5, OUTPUT);
+    
+    //Set up the multiplexer to choose the correct style of inputs on hacker port
+  pinMode(8, OUTPUT);
+  pinMode(12, OUTPUT);
+  digitalWrite(8, LOW);
+  digitalWrite(12, LOW);
+  pinMode(A8, INPUT);
+  
 }
 
 void loop()
 {
   
-   int sensorValue = analogRead(A0);
+   int sensorValue = analogRead(inputPin); //Hooked up to potentiometer
    Serial.println(sensorValue);
 
   unsigned long currentMillis = millis();
