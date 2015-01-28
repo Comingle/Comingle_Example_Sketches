@@ -1,12 +1,11 @@
-/* Snow Crash: TcDS
+/* Snow Crash - Electronic Hallucinogen Dual Mode POT.ino
 
+Make blinking patterns in front of your eyes! Connect electrodes. Feel funky!
+
+* {♥} COMINGLE --  2014/12/04 -- Share Freely
 
 based mostly off blinkwithoutdelay:
- created 2005
- by David A. Mellis
- modified 8 Feb 2010
- by Paul Stoffregen
- 
+ created 2005  by David A. Mellis
  This example code is in the public domain.
  */
 
