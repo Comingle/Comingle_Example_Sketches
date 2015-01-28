@@ -37,6 +37,9 @@ FEATURES TO ADD:
 */
  
  
+ String separator = " | ";
+
+ 
 // set up the OSC stuff
 OscP5 oscP5;
 NetAddress myRemoteLocation;
@@ -56,7 +59,7 @@ int drawWidth = 1;
 
 
 String waves[] = {
-  "experimental/concentration", "jaw_clench", "blink"
+  "experimental/mellow", "jaw_clench", "blink"
 };
 
 
@@ -156,10 +159,6 @@ void oscEvent(OscMessage theOscMessage) {
     }
   }
   
-  //Doing the first wave
-          power=int(values[2][0]*1000);
-
-     port.write(power); 
 
                                             println("end");
 
@@ -201,7 +200,7 @@ void draw() {
       // Create the text, talking about the waveform with its values
       fill(c);
       textAlign(TOP, LEFT);
-      text(waves[i] + "(" + str(int(values[i][curChannel]*100)) + ")", 15+i*100, bottom-15);
+      text(waves[i] + "(" + str(int(values[i][curChannel]*100)) + ")", 15+i*200, bottom-15);
       
       // Draw the line of the waveform
       stroke(c);
@@ -215,7 +214,35 @@ void draw() {
       }
     }
   }
-   
+  
+  
+  ///Send it all to Arduino
+  
+  int reading0= int(values[0][0]*1000);
+     int reading1= int(values[1][0]*1000);
+       int reading2= int(values[2][0]*1000);
+       
+           port.write("0"); //The value
+
+    port.write(reading0); //The value
+//  port.write(separator);//Separate different readings
+           port.write("1"); //The value
+
+    port.write(reading1); //The value
+ // port.write(separator);//Separate different readings
+             port.write("2"); //The value
+
+      port.write(reading2); //The value
+ // port.write(separator);//Separate different readings
+
+ //  port.write("\n");
+  
+  /*
+     //Doing the first wave
+          power=
+
+     port.write(power); 
+*/
   
   // Update the current x position across the page, and wrap around when we hit the end
   currentPosition+=drawWidth;
