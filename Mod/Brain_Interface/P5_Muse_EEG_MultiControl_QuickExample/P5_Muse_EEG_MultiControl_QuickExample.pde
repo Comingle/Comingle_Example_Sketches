@@ -45,7 +45,7 @@ OscP5 oscP5;
 NetAddress myRemoteLocation;
  
 // Number of data channels
-int numChannels = 4;
+int numChannels = 1;
  
 // Some globals: current X position where we're drawing data; width of the lines we're drawing
 int currentPosition = 0;
@@ -83,7 +83,7 @@ float values[][] = new float[numBuckets][numChannels];
 // Set up the program
 void setup() {
   // Specify the screen size
-  size(1000, 800);
+  size(1000, 600);
  
   // Set up the OSC stuff
   oscP5 = new OscP5(this, 5000);
@@ -200,10 +200,13 @@ void draw() {
       // Create the text, talking about the waveform with its values
       fill(c);
       textAlign(TOP, LEFT);
-      text(waves[i] + "(" + str(int(values[i][curChannel]*100)) + ")", 15+i*200, bottom-15);
+      textSize(30);
+      text(waves[i] + "(" + str(int(values[i][curChannel]*100)) + ")", 15+i*400, bottom);
+      
       
       // Draw the line of the waveform
       stroke(c);
+      strokeWeight(4);
       line(currentPosition, map(lastPos[i][curChannel], 0, 1, top-30, bottom), currentPosition+drawWidth, map(values[i][curChannel], 0, 1, top-30, bottom));
       
       // Update where we came from, for drawing the next line
@@ -228,11 +231,11 @@ void draw() {
 //  port.write(separator);//Separate different readings
            port.write("1"); //The value
 
-    port.write(reading1); //The value
+    port.write(reading1+reading2); //The value
  // port.write(separator);//Separate different readings
              port.write("2"); //The value
 
-      port.write(reading2); //The value
+      port.write(reading2); //The value //Doesn't work on Blue Dildo
  // port.write(separator);//Separate different readings
 
  //  port.write("\n");
