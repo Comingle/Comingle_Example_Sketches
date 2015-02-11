@@ -1,9 +1,14 @@
-import processing.serial.*;
+/* Mod software
+/* Public Domain - adapted from other processing and arduino sketches */
+/*Example by Quitmeyer/Comingle, Dec 10, 2014
+ * {♥} COMINGLE --  2014/12/04 -- Share Freely
 
-import oscP5.*;
-import netP5.*;
+This uses the MUSE eeg and gets information from a
+processing sketch that reads the OSC messages and tells the motors what to do
 
-import processing.net.*;
+Github repo for p5 sketch and latest version of this are at
+https://github.com/Comingle/Comingle_Example_Sketches/tree/master/Mod/Brain_Interface
+*/
 
 /* OpenProcessing Tweak of *@*http://www.openprocessing.org/sketch/163811*@* */
 /* !do not delete the line above, required for linking your tweak if you upload again */
@@ -26,6 +31,16 @@ import processing.net.*;
  * 
  * 3) Enjoy :)
  */
+
+
+
+import processing.serial.*;
+
+import oscP5.*;
+import netP5.*;
+
+import processing.net.*;
+
 
  
 /*

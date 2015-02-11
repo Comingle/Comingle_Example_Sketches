@@ -1,6 +1,14 @@
-/* Multivibe software -- written by A Quitmeyer / Comingle. First released Dec 1, 2014 */
+/* Mod software
 /* Public Domain - adapted from other processing and arduino sketches */
-/* This software comes pre-loaded on Comingle Multivibe sex toys */
+/*Example by Quitmeyer/Comingle, Dec 10, 2014
+ * {♥} COMINGLE --  2014/12/04 -- Share Freely
+
+This uses the MUSE eeg and gets information from a
+processing sketch that reads the OSC messages and tells the motors what to do
+
+Github repo for p5 sketch and latest version of this are at
+https://github.com/Comingle/Comingle_Example_Sketches/tree/master/Mod/Brain_Interface
+*/
 
 #include <OSSex.h>
 
