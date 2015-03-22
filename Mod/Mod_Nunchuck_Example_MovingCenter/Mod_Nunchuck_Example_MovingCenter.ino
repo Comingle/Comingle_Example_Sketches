@@ -1,5 +1,5 @@
-/* Multivibe Sketch v0.2 -- written by Craig Durkin / Comingle. */
-/* This software comes pre-loaded on Comingle Multivibe sex toys */
+/* Mod Nunchuck Sketch -- written by Craig Durkin / Comingle. */
+/*  */
 
 #include <Wire.h>
 #include <OSSex.h>
@@ -10,31 +10,12 @@ void setup() {
   // Set ID. ALPHA (0) or BETA (1) are current options.
   Toy.setID(BETA);
   
-  // Button will increase/decrease power by 20%
-  Toy.setPowerScale(0.03);
-  Toy.setTimeScale(0.02);
-  
   // Blip all the motors and flash the LED to show that everything is working and the device is on.
   startupSequence();
 
   // Set the patterns that the button will cycle through
 
-  Toy.addPattern(first);
-  Toy.addPattern(second);
-  Toy.addPattern(third);
-  Toy.addPattern(pulse);
-  Toy.addPattern(fadeCos);
-  Toy.addPattern(weird3);
-  Toy.addPattern(flicker);
-  Toy.addPattern(weird2);
-  Toy.addPattern(fadeSequence);
-  Toy.addPattern(fadeOffset);
-  Toy.addPattern(pulse2);
 
-  // Set up the button click handlers
-  Toy.attachClick(click);
-  Toy.attachDoubleClick(doubleClick);
-  Toy.attachLongPressStart(longPress);
   
   pinMode(8, OUTPUT);
     pinMode(12, OUTPUT);
