@@ -1,18 +1,16 @@
-/* Snow Crash - Electronic Hallucinogen Dual Mode POT.ino
+/* Qtouch test
 
-Make blinking patterns in front of your eyes! Connect electrodes. Feel funky!
+
 
 * {♥} COMINGLE --  2014/12/04 -- Share Freely
 
-based mostly off blinkwithoutdelay:
- created 2005  by David A. Mellis
- This example code is in the public domain.
+
  */
 
 // constants won't change. Used here to 
 // set pin numbers:
-const int ledPin =  6;      // This is the Analog input
-const int inputPin = 9;
+const int ledPin =  13;      // This is the Analog input
+const int inputPin = A3;
 // Variables will change:
 int ledState = LOW;             // ledState used to set the LED
 long previousMillis = 0;        // will store last time LED was updated

@@ -10,7 +10,7 @@ Using QTouch Capacitive Touch Sensing for more reliable touch sensing without gr
 #include <ADCTouch.h>
 
 int ref0, ref1;       //reference values to remove offset
-int led = 3;
+int led = 13;
 
 // variables:
 int sensorValue = 0;         // the sensor value
@@ -100,7 +100,7 @@ void loop()
     Serial.println(value1);
     
     
- 
+ analogWrite(led,value0);
    
    
     delay(100);
