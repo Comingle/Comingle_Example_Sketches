@@ -72,7 +72,15 @@ pinMode(led,OUTPUT);
 
 //NOTE: For some reason these changes don't take place UNTIL you open the serial monitor????
 mySerial.println("SR,20000000"); //Set device in peripheral mode and set turn on auto advertising
-     mySerial.println("S-,DildoCossol");
+   // mySerial.println("SF,1");
+    delay(500);
+    //mySerial.println("SS,C0000000"); 
+    delay(500);
+   // mySerial.println("SR,00000000");//Set device in peripheral mode and set turn on auto advertising
+     mySerial.println("S-,DildoMO"); 
+     //S-,DildoSenl
+         delay(500);
+
     mySerial.println("R,1"); //Reboot
     delay(500);
     mySerial.println("A"); //Start advertising
@@ -82,20 +90,23 @@ mySerial.println("SR,20000000"); //Set device in peripheral mode and set turn on
 
 void loop()
 {
+  
+  //Recieve
 // while(mySerial.available()){
 //    myChar = mySerial.read();
 //    Serial.print(myChar);
 //  }
-//  delay(500);              // wait for a second
 
-//  while(Serial.available()){
-//   myChar = Serial.read();
-//   mySerial.print(myChar);
-//  }
+//Send BLUEtooht from arduino
 
-  digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(100);              // wait for a second
-  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
-  delay(100);              // wait for a second
+  while(Serial.available()){
+   myChar = Serial.read();
+   mySerial.print(myChar);
+  }
+
+//  digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
+//  delay(100);              // wait for a second
+//  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
+//  delay(100);              // wait for a second
 }
 
