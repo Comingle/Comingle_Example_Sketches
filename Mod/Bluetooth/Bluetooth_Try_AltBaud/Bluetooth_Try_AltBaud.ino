@@ -8,7 +8,7 @@
  
  */
 
-#include <OSSex.h>
+//#include <OSSex.h>
 #include <Wire.h>
 #include <SoftwareSerial.h>
 
