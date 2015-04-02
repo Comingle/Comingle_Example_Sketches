@@ -21,6 +21,8 @@
 AltSoftSerial altSerial;
 
 int led = 13;
+  char c;
+
 
 void setup() {
   
@@ -61,15 +63,14 @@ void setup() {
 }
 
 void loop() {
-  char c;
 
   if (Serial.available()) {
     c = Serial.read();
     altSerial.print(c);
   }
-  if (altSerial.available()) {
-    c = altSerial.read();
-    Serial.print(c);
-  }
+//  if (altSerial.available()) {
+//    c = altSerial.read();
+//    Serial.print(c);
+//  }
 }
 

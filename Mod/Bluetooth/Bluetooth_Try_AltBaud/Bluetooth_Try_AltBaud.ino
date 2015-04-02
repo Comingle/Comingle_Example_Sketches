@@ -41,9 +41,9 @@ pinMode(led,OUTPUT);
 
  
     Serial.begin(9600);
-      while (!Serial) {
-    ; // wait for serial port to connect. Needed for Leonardo only
-  }
+//      while (!Serial) {
+//    ; // wait for serial port to connect. Needed for Leonardo only
+//  }
         Serial.println("Hey Serial");
 
       // set the data rate for the SoftwareSerial port
@@ -71,23 +71,22 @@ pinMode(led,OUTPUT);
 /**/
 
 mySerial.println("SR,20000000"); //Set device in peripheral mode and set turn on auto advertising
-   // mySerial.println("SF,1");
-    delay(500);
-    //mySerial.println("SS,C0000000"); 
-    delay(500);
-   // mySerial.println("SR,00000000");//Set device in peripheral mode and set turn on auto advertising
+         delay(500);
+
      mySerial.println("S-,DildoMO"); 
      //S-,DildoSenl
          delay(500);
          
-mySerial.println("SB,0"); // set Baud rate to 2400
+//mySerial.println("SB,0"); // set Baud rate to 2400
          delay(500);
 
     mySerial.println("R,1"); //Reboot
     delay(500);
     mySerial.println("A"); //Start advertising
     
-
+//          mySerial.end(); //Kill soft serial
+//
+//      mySerial.begin(2400); //Set new Baudrate
 
     
    /**/
