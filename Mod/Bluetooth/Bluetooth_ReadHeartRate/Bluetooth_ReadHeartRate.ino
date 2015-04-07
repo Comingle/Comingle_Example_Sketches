@@ -51,10 +51,10 @@ void setup()
 
   //Hardware Serial (UART)
   //We need this to be the same as the Soft Serial or else it doesn't work for me
-  Serial.begin(115200);
+  Serial.begin(2400);
 
   // set the data rate for the SoftwareSerial port
-  mySerial.begin(115200); //default rate of bluetooth RN4020 is 115200, we changed it for more reliable data over Software serial
+  mySerial.begin(2400); //default rate of bluetooth RN4020 is 115200, we changed it for more reliable data over Software serial
 
   //There's a good chance you might need to run the commands the first time by setting this to 115200 since that is default
   /*
@@ -74,10 +74,7 @@ void setup()
   //BLUETOOTH SETUP
   //Initialize BT RN4020
   
-     mySerial.println("SB,0"); // 0 = 2400 Baud   1 = 9600 baud  2= 19200 baud   4 = 115200 baud (default)
-        delay(500);
-      mySerial.println("R,1"); //Reboot
-  delay(1000);
+
 
   //Set as central or as a peripheral device
   //mySerial.println("SR,20000000"); //Set device in peripheral mode and set turn on auto advertising
@@ -318,23 +315,4 @@ void loop()
     mySerial.print(myChar);
   }
 }
-
-
-/**/
-//    mySerial.println("+");
-//    delay(1000);
-//    mySerial.println("SF,1");
-//    delay(500);
-//    mySerial.println("SS,C0000000"); //Support Device Info and Battery as server
-//    delay(500);
-//    mySerial.println("SR,92000000");
-//    delay(500);
-////    mySerial.println("S-,Dildoz");
-////    delay(500);
-//    mySerial.println("R,1"); //Reboot
-//    delay(500);
-//    mySerial.println("LS"); //Start advertising
-//    /**/
-//This Code works well for just making it show up
-/**/
 
