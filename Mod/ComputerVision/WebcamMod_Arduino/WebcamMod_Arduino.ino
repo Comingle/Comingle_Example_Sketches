@@ -1,4 +1,6 @@
-/* Multivibe software -- written by A Quitmeyer / Comingle. First released Dec 1, 2014 */
+/* Multivibe software --
+{♥} COMINGLE -- share freely!
+written by A Quitmeyer / Comingle. First released Dec 1, 2014 */
 /* Public Domain - adapted from other processing and arduino sketches */
 /* This software comes pre-loaded on Comingle Multivibe sex toys */
 
