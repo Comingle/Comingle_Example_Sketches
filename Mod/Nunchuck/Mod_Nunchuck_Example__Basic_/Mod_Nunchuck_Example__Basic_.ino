@@ -10,9 +10,9 @@ void setup() {
   // Set ID. ALPHA (0) (lilypad boards) or BETA (1) (Dilduino Boards) are current options.
   Toy.setID(BETA);
   
-  // Button will increase/decrease power by 20%
-  Toy.setPowerScale(0.03);
-  Toy.setTimeScale(0.02);
+//  // Button will increase/decrease power by 20%
+//  Toy.setPowerScale(0.03);
+//  Toy.setTimeScale(0.02);
   
 
 

@@ -16,7 +16,7 @@ void setup() {
   Toy.setHackerPort(HACKER_PORT_I2C); 
   
   //nunchuck_init();
-  Serial.begin(115200);
+  Serial.begin(9600);
   chuck.begin();
   chuck.update();
   //chuck.calibrateJoy();
@@ -45,6 +45,7 @@ void loop() {
 
 //not a function//  if (chuck.buttonC()) {
   if (chuck.buttonC) {
+    Toy.setOutput(-1,255);
      Serial.print("C");
   } else  {
      Serial.print("-");
